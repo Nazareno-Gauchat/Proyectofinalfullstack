@@ -1,0 +1,40 @@
+.carousel-item img {
+    width: 100%;
+    margin-top: 5%;
+  }
+
+  h2{
+    margin-top: 5%;
+    color: rgb(247, 241, 234);
+
+  }
+
+  body{
+    background-color: rgb(49, 48, 48);
+  }
+  .navbar-nav .nav-link:hover{
+    color:grey;
+  }
+  .text-reset{
+    text-decoration: none;
+  }
+  .destacado{
+    text-decoration-line: underline;
+  }
+  footer{
+    margin-top: 5%;
+  }
+  @keyframes changeColor {
+    0% { color: red; }
+    50% { color: blue; }
+    100% { color: green; }
+  }
+
+  /* Aplicar la animación al elemento deseado */
+  .animated-text {
+    animation: changeColor 5s infinite; /* 3s indica la duración de la animación */
+    text-decoration: underline;
+  }
+  a{
+    text-decoration: none;
+   }
