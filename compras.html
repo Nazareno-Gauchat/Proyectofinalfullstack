@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="compras.css">
+  <title>Formulario de Pago</title>
+</head>
+<body>
+  <center><h1>Metodo de Pago</h1></center>
+
+  <form action="procesar_pago.php" method="POST">
+    
+   <center> <select id="metodo_pago" name="metodo_pago">
+      <option value="tarjeta">Tarjeta de Crédito</option>
+      <option value="tarjeta">Tarjeta de Debito</option> 
+      <option value="mercado">Mercado Pago</option> 
+      <option value="naranja">Naranja X</option> 
+      <option value="tarjeta">Paypal</option> 
+    </select>
+</center>
+    
+    <br><br>
+    
+    <center><input type="text" id="numero_tarjeta" placeholder="Numero de la tarjeta" name="numero_tarjeta" required></center>
+    
+    <br><br>
+    
+    
+    <center><input type="text" id="nombre_tarjeta" placeholder="Nombre titular de la tarjeta" name="nombre_tarjeta" required></center>
+    
+    <br><br>
+
+    <center><input type="text" id ="fecha_ven" placeholder="Fecha de vencimiento" name="fecha_ven" required></center>
+
+    
+    <br><br>
+
+   <center><input type="submit" value="Realizar Pago"></center> 
+  </form>
+</body>
+</html>
