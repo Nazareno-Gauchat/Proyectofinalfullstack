@@ -7,7 +7,13 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <link rel="shortcut icon" href="./img/R.jpg"  type="image/x-icon">
 
-  <title>Venta de Ollas</title>
+  <title>Venta de Sartenes</title>
+  <style>
+    .carrito {
+      float: right;
+      color: black;
+    }
+  </style>
 </head>
 <body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
@@ -32,41 +38,40 @@
                 <a class="nav-link active" aria-current="page" href="venta de ollas.html">Ollas</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Sartenes</a>
+                <a class="nav-link active" aria-current="page" href="ventas de sartenes.html">Sartenes</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Iniciar sesion</a>
+                <a class="nav-link active" aria-current="page" href="iniciosesion.html">Iniciar sesion</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Registrarse</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Carrito</a>
+                <a class="nav-link active" aria-current="page" href="registrarse.html">Registrarse</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
 </header>
+<header>
+  <!-- ... -->
+  <div id="carrito" class="carrito"></div>
+</header>
   <main>
     <div class="producto">
-      <a href="sarten des.html"> <img src="sarten1-removebg-preview.png" alt="Olla 2" class="imagen">
-      </a>
+      <a href="sarten des.html"><img src="./img/sarten1-removebg-preview.png" alt="sarten1" class="imagen"></a>
       <div class="descripcion">
         <h4>Sarten la Nora</h4>
         <p>Sarten de titanio con detalles de aleacion de cobre y bronce en la base.</p>
-        <p class="precio">ARS $9.999.98</p>
-        <button>Agregar al carrito</button>
+        <p class="precio">ARS $25.999.99</p>
+        <button onclick="agregarAlCarrito('Sarten de Titanio', 25999.99)">Agregar al carrito</button>
       </div>
     </div>
     <div class="producto">
-      <a href="sarten des 2.html"> <img src="sarten2-removebg-preview.png" alt="Olla 2" class="imagen">
-      </a>
+      <a href="sarten des 2.html"><img src="./img/sarten2-removebg-preview.png" alt="sarten2" class="imagen"></a>
       <div class="descripcion">
         <h4>Sarten Ezzen</h4>
         <p>Sarten Antiadherente de fibra de carbono y detalles de obsidiana en la base.</p>
-        <p class="precio">ARS $12.998.99</p>
-        <button>Agregar al carrito</button>
+        <p class="precio">ARS $13.999.99</p>
+        <button onclick="agregarAlCarrito('Sarten Ezzen', 13999.99)">Agregar al carrito</button>
       </div>
     </div>
     <!-- Agrega más productos aquí -->
@@ -110,7 +115,7 @@
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
-            Products
+            Productos
           </h6>
           <p>
             <a href="#!" class="text-reset">Ollas</a>
@@ -123,7 +128,7 @@
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
-            Useful links
+            Links
           </h6>
           <p>
             <a href="index.html" class="text-reset">Inicio</a>
@@ -138,19 +143,38 @@
  
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
           <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <h6 class="text-uppercase fw-bold mb-4">Contactos</h6>
           <p><i class="fas fa-home me-3"></i> San francisco, Córdoba Argentina</p>
-          <a href="mailto:bnroatta@gmail.com">bnroatta@gmail.com</a>
-          <a href="mailto:ngauchat@ggmail.com">ngauchat@ggmail.com</a>
-          <a href="mailto:jmalgarbe@escuelsproa.edu.ar">jmalgarbe@escuelsproa.edu.ar</a>
-          <a href="mailto:tvottero@gmail.com">tvottero@gmail.com</a>
-          <a href="mailto:fgpilliez@escuelasproa.edu.ar">fgpilliez@escuelasproa.edu.ar</a>
-          <a href="mailto:staverna@escuelasproa.edu.ar">staverna@escuelasproa.edu.ar</a>
+          <br><a href="mailto:bnroatta@gmail.com">Blas Roatta</a></br>
+          <a href="mailto:ngauchat@ggmail.com">Nazareno Gauchat</a>
+          <a href="mailto:jmalgarbe@escuelsproa.edu.ar">Juan Manuel Algarbe</a>
+          <a href="mailto:tvottero@gmail.com">Tiago Vottero</a>
+          <a href="mailto:fgpilliez@escuelasproa.edu.ar">Federico Pilliez</a>
+          <a href="mailto:staverna@escuelasproa.edu.ar">Santino Taverna</a>
         </div>
         <!-- Grid column -->
       </div>
       <!-- Grid row -->
     </div>
 </footer>
+<script>
+  var carrito = [];
+  var total = 0;
+  function agregarAlCarrito(nombre, precio) {
+    carrito.push({ nombre: nombre, precio: precio });
+    total += precio;
+    actualizarCarrito();
+  }
+  function actualizarCarrito() {
+    var carritoHTML = "<h3>Carrito de Compras</h3>";
+    for (var i = 0; i < carrito.length; i++) {
+      carritoHTML += "<p>" + carrito[i].nombre + " - ARS $" + carrito[i].precio + "</p>";
+    }
+    carritoHTML += "<p>Total: ARS $" + total + "</p>";
+    document.getElementById("carrito").innerHTML = carritoHTML;
+  }
+    actualizarCarrito();
+
+</script>
 </body>
 </html>
