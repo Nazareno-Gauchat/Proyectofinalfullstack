@@ -1,1 +1,1 @@
-<h1>Algunos CSS estan incorporados como STYLES en html, o con el uso de Bootsrap incluyendo JAVASCRIPT</h1>
+<h1>Algunos CSS Y JS estan incorporados como STYLES o SCRYPT en html, o con el uso de Bootsrap incluyendo </h1>
